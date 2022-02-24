@@ -5,21 +5,21 @@
     font-family: "Proxima Nova";
     src: url("assets/static/font/ProximaNova-Regular.woff2");
     font-style: normal; 
-    font-weight: 300
+    font-weight: 300;
 }
 
 @font-face {
     font-family: "Proxima Nova";
     src: url("assets/static/font/ProximaNova-Semibold.woff2");
     font-style: normal; 
-    font-weight: 400
+    font-weight: 400;
 }
 
 @font-face {
     font-family: "Proxima Nova";
     src: url("assets/static/font/ProximaNova-Light.woff2");
     font-style: normal; 
-    font-weight: normal
+    font-weight: normal;
 }
 
 body {
