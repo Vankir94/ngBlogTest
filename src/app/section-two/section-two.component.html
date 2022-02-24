@@ -1,0 +1,55 @@
+<div class="post-container">
+    <h3>What's New?</h3>
+    <div class="row">
+        <div class="col">
+            <a href="https://blog.combin.com/instagram-faq-all-you-need-to-know-bb2559ac606b" target="_blank">
+                <div class="card" style="width: 100%;">
+                    <img src="./assets/static/image/desktop/img1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Instagram FAQ — All You Need To Know</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://blog.combin.com/dmexco-2019-meet-combin-in-cologne-b845529a1e63" target="_blank">
+                <div class="card" style="width: 100%;">
+                    <img src="./assets/static/image/desktop/img2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">DMEXCO 2019 — Meet Combin in Cologne</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="https://blog.combin.com/limits-display-new-user-preview-new-filters-and-many-more-features-all-about-combin-2-1-d78713383da7" target="_blank">
+                <div class="card" style="width: 100%;">
+                    <img src="./assets/static/image/desktop/img3.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Limits Display, New User Preview, New Filters, and Many More Features — All about Combin 2.1</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="row" *ngIf="isReadMore">
+        <div class="col" *ngFor="let blogPost of blogPosts | sort">
+            <a [href]="blogPost.url" target="_blank">
+                <div class="card" style="width: 100%;">
+                    <img src="./assets/static/image/desktop/img1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">{{blogPost.title}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="read-more"><span class="cursor" (click)="openMore()">Read More</span>
+        <span>
+            <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.8" d="M13 1L7 7L1 1" stroke="#6527D9" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </span>
+    </div>
+</div>

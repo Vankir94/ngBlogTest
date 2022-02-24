@@ -1,0 +1,70 @@
+<section>
+    <div id="carouselExampleInterval" class="carousel slide carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="wrapper">
+                    <div class="wrapper-text">
+                        <p>
+                            “I registered on the AidaForm website, having stumbled upon one of the form templates, which
+                            I
+                            really liked. My
+                            first form, which is still active by the way, was published 20 minutes after I found the
+                            AidaForm
+                            website and
+                            created an account!
+                        </p>
+                        <div class="after">
+                            <span class="name">
+                                Ben Johnson<span class="decor">,</span>
+                            </span>
+                            <span class="email">
+                                web-store owner
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" *ngFor="let feedback of feedbacks">
+                <div class="wrapper">
+                    <div class="wrapper-text">
+                        <p [ngClass]="{'remove-hide': isHide}" (click)="removeHide()">
+                            {{feedback.text}}
+                        </p>
+                        <div class="after">
+                            <span class="name">
+                                {{feedback.name}}<span class="decor">,</span>
+                            </span>
+                            <span class="email">
+                                {{feedback.instagram_username}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="svg-wrapper">
+            <svg width="388" height="388" viewBox="0 0 388 388" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.1" cx="194" cy="194" r="194" fill="url(#paint0_linear_1_2231)" />
+                <defs>
+                    <linearGradient id="paint0_linear_1_2231" x1="29.4345" y1="354.552" x2="307.724" y2="41.4759"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="carusel-controls-item">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
