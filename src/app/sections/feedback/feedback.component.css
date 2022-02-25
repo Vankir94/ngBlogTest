@@ -18,7 +18,7 @@
     overflow: hidden;
 }
 
-:host button:disabled {
+:host .transparent {
     opacity:0.2;
 }
 

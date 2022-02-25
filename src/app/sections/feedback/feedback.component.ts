@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, EventEmitter, ViewEncapsulation } from '@angular/core';
-import { takeUntil } from 'rxjs';
+import { delay, takeUntil } from 'rxjs';
 import { IFeedback } from 'src/app/interfaces';
 import { ApiMockService } from 'src/app/shared/services/api-mock.service';
 
@@ -11,8 +11,9 @@ import { ApiMockService } from 'src/app/shared/services/api-mock.service';
 })
 export class SectionOneComponent implements OnInit, OnDestroy {
 
-  public feedbackList!: Array<IFeedback>;
+  public feedbackList: Array<IFeedback> | [] = [];
   public isHide = false;
+  public isDisabled = true;
 
   private destroyEvent: EventEmitter<void> = new EventEmitter();
 
@@ -21,11 +22,18 @@ export class SectionOneComponent implements OnInit, OnDestroy {
   ) { }
 
   public ngOnInit(): void {
+    
     this.apiMockService.getFeedbackList()
     .pipe(
+      delay(3000),
       takeUntil(this.destroyEvent)
     )
-    .subscribe(res => this.feedbackList = res);
+    .subscribe(res => {
+      if (Array.isArray(res) && res !== []) {
+        this.isDisabled = false;
+      }
+      this.feedbackList = res
+    });
   }
 
   public toggleHidden(): void{

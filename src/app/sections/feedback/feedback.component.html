@@ -55,14 +55,14 @@
             </svg>
         </div>
         <div class="carusel-controls-item">
-            <button class="carousel-control-prev" disabled type="button" data-bs-target="#carouselExampleInterval"
+            <button class="carousel-control-prev" [disabled]="isDisabled" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="prev">
-                <div class="carousel-control-left" aria-hidden="true"></div>
+                <div class="carousel-control-left" [ngClass]="{transparent: isDisabled}" aria-hidden="true"></div>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            <button class="carousel-control-next" [disabled]="isDisabled" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="next">
-                <div class="carousel-control-right" aria-hidden="true"></div>
+                <div class="carousel-control-right" [ngClass]="{transparent: isDisabled}" aria-hidden="true"></div>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
