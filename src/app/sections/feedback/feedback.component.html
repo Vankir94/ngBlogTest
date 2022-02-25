@@ -24,10 +24,10 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" *ngFor="let feedback of feedbacks">
+            <div class="carousel-item" *ngFor="let feedback of feedbackList">
                 <div class="wrapper">
                     <div class="wrapper-text">
-                        <p [ngClass]="{'remove-hide': isHide}" (click)="removeHide()">
+                        <p [ngClass]="{'text-hidden': isHide}" (click)="toggleHidden()">
                             {{feedback.text}}
                         </p>
                         <div class="after">
@@ -55,14 +55,14 @@
             </svg>
         </div>
         <div class="carusel-controls-item">
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            <button class="carousel-control-prev" disabled type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <div class="carousel-control-left" aria-hidden="true"></div>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <div class="carousel-control-right" aria-hidden="true"></div>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>

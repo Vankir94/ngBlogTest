@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { SectionOneComponent } from './section-one/section-one.component';
-import { SectionTwoComponent } from './section-two/section-two.component';
+import { SectionOneComponent } from './sections/feedback/feedback.component';
+import { SectionTwoComponent } from './sections/news/news.component';
 import { SortPipe } from './shared/pipes/sort.pipe';
 
 @NgModule({

@@ -1,0 +1,247 @@
+:host section {
+    height: 700px;
+    background: #6527d9;
+    border-radius: 12px;
+    color: white;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 120%;
+    /* or 46px */
+    position: relative;
+    letter-spacing:0.8px;
+}
+
+:host p {
+    max-width: 824px;
+    max-height: 276px;
+    overflow: hidden;
+}
+
+:host button:disabled {
+    opacity:0.2;
+}
+
+:host .carousel-item {
+    height: 700px;
+}
+
+:host .text-hidden {
+    overflow: visible;
+}
+
+:host .svg-wrapper {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+}
+
+:host .wrapper-text {
+    padding: 184px 0 184px 80px;
+}
+
+:host .after {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 130%;
+    /* or 31px */
+    letter-spacing:0.2px;
+}
+
+:host .email {
+    opacity:0.8;
+}
+
+:host .carusel-controls-item {
+    display: flex;
+    color: white;
+    position: absolute;
+    right: 5%;
+    bottom: 19%;
+}
+
+:host .carousel-control-next {
+    width: 48px;
+    height: 48px;
+    margin-left: 20px;
+    position: relative;
+    background: #8c67dd;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0,0.08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130,0.15);
+    border-radius: 32px;
+    opacity: 1;
+}
+
+:host .carousel-control-prev {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    background: #8c67dd;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0,0.08), 0px 0px 0px #e6e6e6, 0px 1px 5px rgba(99, 114, 130,0.15);
+    border-radius: 32px;
+    opacity: 1;
+}
+
+:host .carousel-control-right {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 45%;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    transform: rotate(45deg);
+}
+
+:host .carousel-control-left {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 45%;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    transform: rotate(-135deg);
+}
+
+@media (max-width: 1363px) {
+    :host section {
+        height: 550px;
+    }
+
+    :host .carousel-item {
+        height: 550px;
+    }
+
+    :host .wrapper-text {
+        width: 824px;
+        padding: 150px 0 150px 80px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 100%;
+        /* or 46px */
+        letter-spacing:0.8px;
+    }
+
+    :host svg {
+        width: 288px;
+        height: 288px;
+    }
+}
+
+@media (max-width: 1140px) {
+    :host .wrapper-text {
+        width: 724px;
+        padding: 100px 0 100px 80px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 100%;
+        /* or 46px */
+        letter-spacing:0.8px;
+    }
+
+    :host svg {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 1000px) {
+    :host .wrapper-text {
+        width: 524px;
+        padding: 70px 0 50px 50px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 100%;
+        /* or 46px */
+        letter-spacing:0.8px;
+    }
+
+    :host svg {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 799px) {
+    :host section {
+        height: 520px;
+    }
+
+    :host .carousel-item {
+        height: 520px;
+    }
+
+    :host .wrapper-text {
+        margin-top: 45px;
+        width: 100%;
+        padding: 30px 20px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 100%;
+        /* or 46px */
+        letter-spacing:0.8px;
+    }
+
+    :host .after {
+        margin-bottom: 100px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        /* or 22px */
+        letter-spacing:0.2px;
+    }
+    :host svg {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    :host .wrapper-text {
+        margin-top: 0;
+        padding: 20px 15px;
+        width: 100%;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing:0.2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    :host .wrapper-text {
+        height: 440px;
+        padding-bottom: 0;
+    }
+
+    :host .wrapper {
+        justify-content: center;
+    }
+
+    :host .svg-wrapper {
+        display: none;
+    }
+
+    :host .after {
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 140%;
+        /* or 22px */
+        letter-spacing:0.2px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    :host .decor {
+        display: none;
+    }
+
+    :host .carusel-controls-item {
+        position: absolute;
+        left: 16px;
+        bottom: 16px;
+    }
+}

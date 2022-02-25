@@ -1,4 +1,4 @@
-h3 {
+:host h3 {
     margin: 0;
     padding: 80px;
     font-size: 48px;
@@ -10,23 +10,23 @@ h3 {
     letter-spacing: 0.2px;
 }
 
-img {
-    padding: 12px 20px 12px;
+:host img {
+    padding: 12px;
 }
 
-a {
+:host a {
     color: black;
     text-decoration: none;
 }
 
-.post-container {
+:host .post-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
 }
 
-.read-more {
+:host .read-more {
     padding: 60px;
     font-size: 24px;
     line-height: 32px;
@@ -37,16 +37,16 @@ a {
     font-weight: 300;
 }
 
-.cursor {
+:host .cursor {
     cursor: pointer;
     padding-right: 8px;
 }
 
-.card {
+:host .card {
     /* padding: 6px; */
     border: none;
     border-radius: 12px;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 24px;
     line-height: 130%;
     /* or 31px */
@@ -56,19 +56,23 @@ a {
     letter-spacing: 0.2px;
 }
 
-.card-text {
+:host .card-body {
+    padding-bottom: 5px;
+}
+
+:host .card-text {
     height: 111px;
     padding: 0 20px;
 }
 
-.col {
+:host .col {
     width: 33%;
     flex: none;
     padding-bottom: 12px;
 }
 
 @media (max-width: 1100px) {
-    .card-text {
+    :host .card-text {
         font-size: 16px;
         height: 113px;
         overflow: hidden;
@@ -76,35 +80,34 @@ a {
 }
 
 @media (max-width: 800px) {
-    .row {
-        display: block;
+    :host img {
+        padding: 8px;
     }
 
-    .col {
-        width: 100%;
+    :host .col {
+        width: 50%;
         padding-bottom: 12px;
     }
 }
 
-@media (max-width: 450px) {
-    h3 {
+@media (max-width: 500px) {
+    :host h3 {
         padding: 32px 20px;
         font-size: 24px;
         line-height: 130%;
         letter-spacing: 0.2px;
     }
 
-    .row {
+    :host .row {
         display: block;
     }
 
-    .col {
+    :host .col {
         width: 100%;
-        display: block;
         padding-bottom: 12px;
     }
 
-    .card-text {
+    :host .card-text {
         height: 80px;
         padding: 0 20px;
         font-size: 18px;
